@@ -11,6 +11,21 @@ body {
     font-family: 'MozTTLight', Verdana, sans-serif;
 }
 
+a {
+    color: #ff4e00;
+    font-weight: bold;
+}
+
+p {
+    padding: 1em;
+    font-size: 1.5em;
+}
+
+.list-item-large {
+    font-size: 1.5em;
+    padding: 1em;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -63,7 +78,7 @@ div[role="main"] > p {
   -moz-transform: translateX(0) translateY(90%);
 }
 
-#laps h2 {
+#laps h2, .list-header {
     font-size: 1.8rem;
     font-weight: lighter;
     color: #666;
