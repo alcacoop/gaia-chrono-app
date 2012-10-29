@@ -91,7 +91,7 @@ define(function (require) {
 
     /* Mozilla/Firefox installation */
     var base = location.href.split("#")[0]; // WORKAROUND: remove hash from url
-    base = location.href.replace("index.html",""); // WORKAROUND: remove index.html
+    base = base.replace("index.html",""); // WORKAROUND: remove index.html
     install.mozillaInstallUrl = base + '/manifest.webapp'; 
 
     install.mozillaInstall = function () {
