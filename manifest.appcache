@@ -1,23 +1,5 @@
 CACHE MANIFEST
-# volo v0.2.4, a JavaScript tool to make JavaScript projects. Allowed commands:
-
-volofile commands:
-
-appcache: 
-build: 
-ghdeploy: Deploys code in www-built to GitHub Pages. Uses www-ghdeploy to house the deployed code and git info for the gh-pages branch
-serve: 
-
-Standard volo commands:
-
-add: Add code to your project.
-amdify: Does a simple AMD wrapping for JS libraries that use browser globals
-create: Creates a new web project.
-help: Gives more detailed help on a volo command.
-info: Get info on a repo
-install: An alias for "add".
-npmrel: Converts npm-installed, nested node_modules to use relative IDs.
-search: Searches for a repo name.
+# ncXsz1m2BBpPFtTU4JftuLrCiwk=
 
 CACHE:
 index.html
