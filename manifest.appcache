@@ -32,9 +32,9 @@ js/app.js
 js/app/laps_history.js
 js/app/chrono.js
 js/app/drawer.js
+js/app/force_redraw_workaround.js
 js/app/install.js
 js/app/about.js
-js/app/chrono.js~
 js/app/main.js
 styles/gaia/fonts/MozTT Regular.ttf
 styles/gaia/fonts/MozTT Light.ttf

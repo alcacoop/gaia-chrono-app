@@ -45,6 +45,7 @@ js/app/drawer.js
 js/app/about.js
 js/lib/install.js
 js/app/install.js
+js/app/force_redraw_workaround.js
 js/app/chrono.js
 js/app/laps_history.js
 js/app/main.js
