@@ -28,7 +28,7 @@ define(function (require) {
   $("#reset_lap").live("click", function () {
     if (typeof current_timer == "undefined") {
       start = undefined;
-      total_elapsed_secs = 0;
+      last_elapsed_time = 0;
       scroll($("#seconds > li.00"), $("#seconds"), 0);
       scroll($("#minutes > li.00"), $("#minutes"), 0);
       scroll($("#hours > li.00"), $("#hours"), 0);    
