@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# ncXsz1m2BBpPFtTU4JftuLrCiwk=
+# ita/Qda48WLhSHxM8176jXHlvUs=
 
 CACHE:
 index.html
@@ -12,6 +12,7 @@ js/lib/jquery.js
 js/lib/install.js
 js/app.js
 js/app/laps_history.js
+js/app/version.js
 js/app/chrono.js
 js/app/drawer.js
 js/app/force_redraw_workaround.js

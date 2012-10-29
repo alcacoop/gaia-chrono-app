@@ -42,6 +42,7 @@ js/app.js
 ----------------
 js/lib/jquery.js
 js/app/drawer.js
+js/app/version.js
 js/app/about.js
 js/lib/install.js
 js/app/install.js
