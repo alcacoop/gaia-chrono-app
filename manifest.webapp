@@ -1,7 +1,7 @@
 {
   "name": "Chrono",
   "description": "Gaia Chronometer Example App",
-  "launch_path": "/index.html",
+  "launch_path": "/gaia-chrono-app/index.html",
   "developer": {
     "name": "Luca Greco <luca.greco@alcacoop.it>",
     "url": "https://github.com/rpl/gaia-chrono"
@@ -31,8 +31,8 @@
   },
   "default_locale": "en-US",
   "icons": {
-    "120": "/icons/chrono-120.png",
-    "60": "/icons/chrono-60.png"
+    "120": "/gaia-chrono-app/icons/chrono-120.png",
+    "60": "/gaia-chrono-app/icons/chrono-60.png"
   },
   "orientation": "portrait-primary"
 }
