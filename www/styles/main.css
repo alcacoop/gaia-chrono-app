@@ -1,0 +1,143 @@
+@import url(gaia/fonts.css);
+@import url(gaia/widgets/headers.css);
+@import url(gaia/widgets/toolbars.css);
+@import url(gaia/widgets/buttons.css);
+@import url(gaia/widgets/drawer/style.css);
+@import url(gaia/widgets/lists/style.css);
+
+@import url(chrono.css);
+
+body {
+    font-family: 'MozTTLight', Verdana, sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    background-color: #fff;
+    height: 100%;
+    overflow-x: hidden;
+}
+/*h2.bb-docs {
+    font-size: 1.8rem;
+    font-family: "Open Sans", Sans-serif;
+    font-weight: lighter;
+    color: #666;
+    margin: -0.1rem 0 0;
+    background-color: #f5f5f5;
+    padding: 0.4rem 0.4rem 0.4rem 3rem;
+    border: solid 0.1rem #e8e8e8;
+}*/
+section[role="region"] {
+    height: 100%; 
+    font: 2.2rem/1em;
+    overflow: hidden;
+}
+div[role="main"] {
+    background: white no-repeat left top;
+    height: -moz-calc(100% - 5rem); 
+}
+div[role="main"] > p {
+    margin: 2rem 2.5rem; 
+}
+
+/* FIX toolbar button bug on click */
+[role="toolbar"] button:active {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+/* View - Slide Horizontal Transition */
+#laps {
+  position: absolute;
+  background: white;
+  top: 5rem;
+  left: 0;
+  border: 0;
+  width: -moz-calc(100% + 13px); /* scrollbar bug */
+  height: -moz-calc(100% - 5rem); 
+  overflow-y: scroll;
+  z-index: 60;
+  -moz-transition: -moz-transform 1s;
+  -moz-transform: translateX(0) translateY(90%);
+}
+
+#laps h2 {
+    font-size: 1.8rem;
+    font-weight: lighter;
+    color: #666;
+    margin: -1px 0 0;
+    background-color: #f5f5f5;
+    padding: 0.4rem 0.4rem 0.4rem 3rem;
+    border: solid 1px #e8e8e8;
+}
+
+#laps:target {
+  -moz-transition: -moz-transform 1s;
+  -moz-transform: translateX(0) translateY(0%);
+}
+
+#about {
+  position: fixed;
+  background: white;
+  top: 5rem;
+  left: 0;
+  border: 0;
+  width: -moz-calc(100% + 13px); /* scrollbar bug */
+  height: -moz-calc(100% - 5rem); 
+  overflow-y: scroll;
+  z-index: 60;
+  -moz-transition: -moz-transform 1s;
+  -moz-transform: translateX(100%) translateY(0%);
+}
+
+#about h2 {
+    font-size: 1.8rem;
+    font-weight: lighter;
+    color: #666;
+    margin: -1px 0 0;
+    background-color: #f5f5f5;
+    padding: 0.4rem 0.4rem 0.4rem 3rem;
+    border: solid 1px #e8e8e8;
+}
+
+#about:target {
+  -moz-transition: -moz-transform 1s;
+  -moz-transform: translateX(0) translateY(0%);
+}
+
+#install {
+  position: fixed;
+  background: white;
+  top: 5rem;
+  left: 0;
+  border: 0;
+  width: -moz-calc(100% + 13px); /* scrollbar bug */
+  height: -moz-calc(100% - 5rem); 
+  overflow-y: scroll;
+  z-index: 60;
+  -moz-transition: -moz-transform 1s;
+  -moz-transform: translateX(100%) translateY(0%);
+}
+
+#install h2 {
+    font-size: 1.8rem;
+    font-weight: lighter;
+    color: #666;
+    margin: -1px 0 0;
+    background-color: #f5f5f5;
+    padding: 0.4rem 0.4rem 0.4rem 3rem;
+    border: solid 1px #e8e8e8;
+}
+
+#install:target {
+  -moz-transition: -moz-transform 1s;
+  -moz-transform: translateX(0) translateY(0%);
+}
+
+/* FIX: drawer li */
+
+[role="application"] nav .inner ul li {
+    border: 0;
+}

@@ -1,0 +1,93 @@
+/*jslint node: true */
+'use strict';
+
+var crypto = require('crypto');
+var fs = require('fs');
+var path = require('path');
+var buildDir = 'www-built';
+
+module.exports = {
+    build: {
+        flags: {
+            //Does not print the build output.
+            'q': 'quiet'
+        },
+
+        run: function (d, v, namedArgs) {
+            //Remove the old dir
+            v.rm('www-built');
+
+            d.resolve(v.spawn('node', ['tools/r.js', '-o', 'tools/build.js'], {
+                useConsole: !namedArgs.quiet
+            }));
+        }
+    },
+    serve: function(d, v, namedArgs) {
+        try {
+            var connect = require('connect');
+        }
+        catch(e) {
+            console.log('To use the `serve` command, you must ' +
+                        'install the connect module:\n\n' + 
+                        'npm install connect');
+            return;
+        }
+
+        var lessMiddleware = require('less-middleware');
+
+        var port = 8008;
+        var base = path.join(process.cwd(), namedArgs.base || 'www');
+        var middleware = [
+            lessMiddleware({ src: base }),
+            connect.static(base),
+            connect.directory(base),
+        ];
+
+        connect.logger.format("OpenWebApp",
+                              "[D] server :method :url :status " +
+                              ":res[content-length] - :response-time ms");
+        middleware.unshift(connect.logger("OpenWebApp"));
+
+        console.log("starting web server on port " + port);
+        connect.apply(null, middleware).listen(port);
+    },
+    appcache: function (d, v, namedArgs) {
+        var q = v.require('q');
+        var hasBuilt = v.exists(buildDir);
+
+        v.command('build')
+            .then(function () {
+                var manifest = v.read('tools/manifest.appcache'),
+                master = v.read(buildDir + '/index.html'),
+                appFiles;
+
+                appFiles = v.getFilteredFileList(buildDir);
+                appFiles = appFiles.map(function (file) {
+                    var start = file.indexOf('/' + buildDir + '/');
+                    start = (start !== -1) ? (start + 11) : 0;
+                    return file.substr(start, file.length);
+                });
+
+                master = master
+                    .replace(/<html\s?/, '<html manifest="manifest.appcache" ')
+                    .replace(/manifest\.appcache"\s>/, 'manifest.appcache">');
+                v.write(buildDir + '/index.html', master);
+
+                return v.command('digest', 'dir=' + buildDir)
+                    .then(function (stamp) {
+                        manifest = v.template(manifest, {
+                            files : appFiles.join('\n'),
+                            stamp : stamp
+                        });
+                        v.write(buildDir + '/manifest.appcache', manifest);
+                    });
+            })
+            .then(function () {
+                //Inform the user of the right mime type, but only do it if
+                //there was not a previous build done.
+                d.resolve(hasBuilt ? '': 'Be sure to set the mime type for ' +
+                          '.appcache files to be: text/cache-manifest');
+            })
+            .fail(d.reject);
+    }
+};
