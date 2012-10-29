@@ -51,44 +51,9 @@ module.exports = {
         console.log("starting web server on port " + port);
         connect.apply(null, middleware).listen(port);
     },
-    appcache: function (d, v, namedArgs) {
-        var q = v.require('q');
-        var hasBuilt = v.exists(buildDir);
-
-        v.command('build')
-            .then(function () {
-                var manifest = v.read('tools/manifest.appcache'),
-                master = v.read(buildDir + '/index.html'),
-                appFiles;
-
-                appFiles = v.getFilteredFileList(buildDir);
-                appFiles = appFiles.map(function (file) {
-                    var start = file.indexOf('/' + buildDir + '/');
-                    start = (start !== -1) ? (start + 11) : 0;
-                    return file.substr(start, file.length);
-                });
-
-                master = master
-                    .replace(/<html\s?/, '<html manifest="manifest.appcache" ')
-                    .replace(/manifest\.appcache"\s>/, 'manifest.appcache">');
-                v.write(buildDir + '/index.html', master);
-
-                return v.command('digest', 'dir=' + buildDir)
-                    .then(function (stamp) {
-                        manifest = v.template(manifest, {
-                            files : appFiles.join('\n'),
-                            stamp : stamp
-                        });
-                        v.write(buildDir + '/manifest.appcache', manifest);
-                    });
-            })
-            .then(function () {
-                //Inform the user of the right mime type, but only do it if
-                //there was not a previous build done.
-                d.resolve(hasBuilt ? '': 'Be sure to set the mime type for ' +
-                          '.appcache files to be: text/cache-manifest');
-            })
-            .fail(d.reject);
-    },
+    //Creates a local project command called appcache
+    appcache: require('volo-appcache')({
+        depends: ['build']
+    }),
     ghdeploy: require('volo-ghdeploy')('www-built', 'www-ghdeploy')
 };
