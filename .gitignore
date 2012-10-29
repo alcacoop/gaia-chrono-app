@@ -1,5 +1,5 @@
 www-built
-www-ghpages
+www-ghdeploy
 node_modules
 *~
 semantic.cache

@@ -89,5 +89,6 @@ module.exports = {
                           '.appcache files to be: text/cache-manifest');
             })
             .fail(d.reject);
-    }
+    },
+    ghdeploy: require('volo-ghdeploy')('www-built', 'www-ghdeploy')
 };
