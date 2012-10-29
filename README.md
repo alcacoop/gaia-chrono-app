@@ -1,3 +1,21 @@
+Gaia Chrono App
+===============
+
+**Chrono** is a simple Gaia OpenWebApp coded as example in 
+**"Hack on FirefoxOs"** talk during local LinuxDay2012 event.
+
+**Chrono** uses volo as devtool to speed up development and
+generate appcache manifest, Gaia UI Building Blocks to
+style the app as a FirefoxOS native application and RequireJS
+to split javascript code into modules and build a single production
+file.
+
+* Run and Install App: http://alcacoop.github.com/gaia-chrono-app
+* Slides: http://learn.alcacoop.it/2012/LinuxDay/HackOnFirefoxOS
+
+Volo Usage
+----------
+
 This web project has the following setup:
 
 * www/ - the web assets for the project
