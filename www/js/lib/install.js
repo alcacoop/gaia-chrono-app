@@ -90,11 +90,11 @@ define(function (require) {
     };
 
     /* Mozilla/Firefox installation */
-  var base = location.href.split("#")[0]; // FIX: remove hash from url
-  install.mozillaInstallUrl = location.href + '/manifest.webapp'; 
+    var base = location.href.split("#")[0]; // WORKAROUND: remove hash from url
+    base = location.href.replace("index.html",""); // WORKAROUND: remove index.html
+    install.mozillaInstallUrl = base + '/manifest.webapp'; 
 
     install.mozillaInstall = function () {
-      console.log("DEBUG", install.mozillaInstallUrl);
         var installRequest = navigator.mozApps.install(install.mozillaInstallUrl);
 
         installRequest.onsuccess = function (data) {
