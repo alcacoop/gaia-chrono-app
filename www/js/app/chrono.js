@@ -1,4 +1,5 @@
 define(function (require) {
+  var force_redraw = require('app/force_redraw_workaround').force_redraw;
   var $ = require("jquery");
 
   for (var i=0; i<60; i++) {
@@ -77,9 +78,14 @@ define(function (require) {
 
   function scroll(element, parent, val){
     var pos = $(element).get(0).clientHeight * val;
-    $(parent).animate({ scrollTop: pos }, { duration: "0.3s", easing: 'swing'});    
+    $(parent).animate({ scrollTop: pos }, 
+                      { duration: "0.3s", easing: 'swing',
+                        step: function() {
+                          force_redraw(element.get(0));
+                        }
+                      });    
   }
-
+  
   // based on http://stackoverflow.com/questions/6312993/javascript-seconds-to-time-with-format-hhmmss
   function secondsToTime(secs) {
     var hours = Math.floor(secs / (60 * 60));
