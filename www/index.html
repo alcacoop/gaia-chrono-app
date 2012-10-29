@@ -86,16 +86,59 @@
       </div>
 
       <div id="about" role="page3" class="view">
-        <h2 id="about-header">About</h2>
-        about...
+        <h2 id="about-header" class="list-header">About</h2>
+        <p><b>Chrono</b> is a simple Gaia OpenWebApp coded as example in
+          <b>"Hack On FirefoxOS"</b> talk during local <i>LinuxDay2012</i> event.
+        </p>
+        <p>
+          <b>Chrono</b> uses <a href="http://volojs.org">volo</a> as devtool to speed up
+          development and to generate appcache manifest, <a href="http://mozilla-b2g.github.com/Gaia-UI-Building-Blocks">Gaia UI Building Blocks</a> to style the app as a FirefoxOS native application and <a href="http://requirejs.org">RequireJS</a> to split javascript code into modules and build a single production file.
+        </p>
+        <h2>Resources</h2>
+        <ul>
+          <li class="list-item-large">
+            <a href="http://learn.alcacoop.it/2012/LinuxDay/HackOnFirefoxOS" target="_">
+              Slides: "Hack on FirefoxOS: mobile, web-based and really open"
+            </a>
+          </li>
+          <li class="list-item-large">
+            <a href="http://github.com/alcacoop/gaia-chrono-app" target="_">
+              App Sourcecode Repo: "github.com/alcacoop/gaia-chrono-app"
+            </a>
+          </li>
+          <li>
+            <a href="#install">
+              <button>Install</button>
+            </a>
+          </li>
+        </ul>
       </div>
 
       <div id="install" role="page4" class="view">
         <h2 id="install-header">Install</h2>
-        install...
-        <button class="install-btn">Install</button>
-        <pre class="install-error">
-        </pre>
+        <p>
+          <b>Chrono</b> is a simple Gaia OpenWebApp coded as example in
+          <b>"Hack On FirefoxOS"</b> talk during local <i>LinuxDay2012</i> event.
+        </p>
+        <p>
+          You can use it as a normal web app on Firefox (optionally pinned as
+          App Tab), install it as Desktop Web App from your Firefox Nightly
+          or as Mobile Web App on Firefox for Android Nightly and FirefoxOS.
+          It will work even offline thanks to the manifest.appcache generated
+          by volo-appcache.
+        </p>
+        <ul>
+          <li>
+            <a href="#about">
+              <button>About</button>
+            </a>
+          </li>
+          <li>
+            <button class="install-btn">Install</button>
+            <pre class="install-error">
+            </pre>
+          </li>
+        </ul>
       </div>
     </section>
     <!-- END content -->
