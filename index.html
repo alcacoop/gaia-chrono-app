@@ -1,1 +1,147 @@
-Setting up pages...
+<!DOCTYPE html>
+<html manifest="manifest.appcache">
+  <head>
+    <meta charset="utf-8"> 
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <script data-main="js/app" src="js/lib/require.js"></script>
+  </head>
+  <body role="application">
+    <!-- START navbar -->
+    <nav>
+      <header>
+        <!--menu type="toolbar">
+          <a href="#"><span class="icon icon-add">add</span></a>
+        </menu-->
+        <h1>Menu</h1>
+      </header>
+      <div class="inner">
+        <ul>
+          <li><a id="main-menu-item" href="#">Chrono</a></li>
+          <li><a id="about-menu-item" href="#about">About</a></li>
+          <li><a id="install-menu-item" href="#install">Install</a></li>
+        </ul>
+      </div>
+      <div role="toolbar">
+        <!--ul>
+          <li><button class="update">Update</button></li>
+        </ul-->
+        <ul class="end">
+          <li><button class="delete" id="delete-laps-history">Delete</button></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- END navbar -->
+
+    <!-- START content -->
+    <section role="region" data-state="none">
+      <header>
+        <a id="open-drawer" href="#"><span class="icon icon-menu">menu</span></a>
+        <h1>Chrono</h1>
+      </header>
+
+      <div id="chrono" role="main">
+        <section role="chrono">
+          <p>
+            <span style="background-image: -moz-element(#hours);"></span>
+            <span style="background-image: -moz-element(#minutes);"></span>
+            <span style="background-image: -moz-element(#seconds);"></span>
+          </p>
+          <div>
+            <ul id="hours" role="listbox">
+            </ul>
+          </div>
+          <div>
+            <ul id="minutes" role="listbox">
+            </ul>
+          </div>
+          <div class="seconds">
+            <ul id="seconds" role="listbox">
+              <!--li role="option"><a href="#">PM</a></li-->
+            </ul>
+          </div>
+        </section>
+
+        <p>
+          <button id="start_stop">Start</button>
+          <button id="reset_lap">Reset</button>
+        </p>
+
+        <div id="laps" role="page2" class="view">
+          <h2 id="laps-header">Laps History <em></em></h2>
+
+          <ul class="laps-list">
+            <!--li data-state="none" data-tag="A">
+              <a href="#">
+                <em class="aside">
+                  <time>1</time>
+                </em>
+                <dl>
+                  <dt>00:00:05</dt>
+                </dl>
+              </a>
+            </li-->
+          </ul>
+        </div>
+      </div>
+
+      <div id="about" role="page3" class="view">
+        <h2 id="about-header" class="list-header">About</h2>
+        <p><b>Chrono</b> is a simple Gaia OpenWebApp coded as example in
+          <b>"Hack On FirefoxOS"</b> talk during local <i>LinuxDay2012</i> event.
+        </p>
+        <p>
+          <b>Chrono</b> uses <a href="http://volojs.org">volo</a> as devtool to speed up
+          development and to generate appcache manifest, <a href="http://mozilla-b2g.github.com/Gaia-UI-Building-Blocks">Gaia UI Building Blocks</a> to style the app as a FirefoxOS native application and <a href="http://requirejs.org">RequireJS</a> to split javascript code into modules and build a single production file.
+        </p>
+        <h2>Resources</h2>
+        <ul>
+          <li class="list-item-large">
+            <a href="http://learn.alcacoop.it/2012/LinuxDay/HackOnFirefoxOS" target="_">
+              Slides: "Hack on FirefoxOS: mobile, web-based and really open"
+            </a>
+          </li>
+          <li class="list-item-large">
+            <a href="http://github.com/alcacoop/gaia-chrono-app" target="_">
+              App Sourcecode Repo: "github.com/alcacoop/gaia-chrono-app"
+            </a>
+          </li>
+          <li>
+            <a href="#install">
+              <button>Install</button>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="install" role="page4" class="view">
+        <h2 id="install-header">Install</h2>
+        <p>
+          <b>Chrono</b> is a simple Gaia OpenWebApp coded as example in
+          <b>"Hack On FirefoxOS"</b> talk during local <i>LinuxDay2012</i> event.
+        </p>
+        <p>
+          You can use it as a normal web app on Firefox (optionally pinned as
+          App Tab), install it as Desktop Web App from your Firefox Nightly
+          or as Mobile Web App on Firefox for Android Nightly and FirefoxOS.
+          It will work even offline thanks to the manifest.appcache generated
+          by volo-appcache.
+        </p>
+        <ul>
+          <li>
+            <a href="#about">
+              <button>About</button>
+            </a>
+          </li>
+          <li>
+            <button class="install-btn">Install</button>
+            <pre class="install-error">
+            </pre>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- END content -->
+
+  </body>
+</html>

@@ -1,0 +1,1 @@
+define(["require","jquery"],function(e){var t=e("jquery");t("#about-menu-item").live("click",function(){var e=t("[role=region]");e.attr("data-state","none")}),t("#about").live("click",function(){if(window.location.hash="#about")window.location.hash=""})})

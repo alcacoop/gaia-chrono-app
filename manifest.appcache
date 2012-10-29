@@ -1,0 +1,141 @@
+CACHE MANIFEST
+# volo v0.2.4, a JavaScript tool to make JavaScript projects. Allowed commands:
+
+volofile commands:
+
+appcache: 
+build: 
+ghdeploy: Deploys code in www-built to GitHub Pages. Uses www-ghdeploy to house the deployed code and git info for the gh-pages branch
+serve: 
+
+Standard volo commands:
+
+add: Add code to your project.
+amdify: Does a simple AMD wrapping for JS libraries that use browser globals
+create: Creates a new web project.
+help: Gives more detailed help on a volo command.
+info: Get info on a repo
+install: An alias for "add".
+npmrel: Converts npm-installed, nested node_modules to use relative IDs.
+search: Searches for a repo name.
+
+CACHE:
+index.html
+build.txt
+icons/chrono-60.png
+icons/chrono-120.png
+manifest.webapp
+js/lib/require.js
+js/lib/jquery.js
+js/lib/install.js
+js/app.js
+js/app/laps_history.js
+js/app/chrono.js
+js/app/drawer.js
+js/app/install.js
+js/app/about.js
+js/app/chrono.js~
+js/app/main.js
+styles/gaia/fonts/MozTT Regular.ttf
+styles/gaia/fonts/MozTT Light.ttf
+styles/gaia/fonts/Moz Light.otf
+styles/gaia/fonts/Moz Medium.otf
+styles/gaia/fonts/MozTT Medium.ttf
+styles/gaia/fonts/Moz Regular.otf
+styles/gaia/fonts.css
+styles/gaia/widgets/buttons.css
+styles/gaia/widgets/drawer/index.html
+styles/gaia/widgets/drawer/style.css
+styles/gaia/widgets/drawer/images/ui/shadow.png
+styles/gaia/widgets/drawer/images/ui/header.png
+styles/gaia/widgets/drawer/images/ui/shadow-header.png
+styles/gaia/widgets/drawer/images/ui/separator.png
+styles/gaia/widgets/drawer/images/ui/pattern-subheader.png
+styles/gaia/widgets/drawer/images/ui/pattern.png
+styles/gaia/widgets/drawer/images/icons/edit.png
+styles/gaia/widgets/drawer/images/icons/close.png
+styles/gaia/widgets/drawer/images/icons/add.png
+styles/gaia/widgets/drawer/images/icons/user.png
+styles/gaia/widgets/drawer/images/icons/menu.png
+styles/gaia/widgets/drawer/images/icons/fav-star.png
+styles/gaia/widgets/drawer/images/icons/back.png
+styles/gaia/widgets/drawer/images/icons/send.png
+styles/gaia/widgets/drawer/images/icons/clear.png
+styles/gaia/widgets/drawer/images/dummy.png
+styles/gaia/widgets/headers/index.html
+styles/gaia/widgets/headers/images/ui/search.png
+styles/gaia/widgets/headers/images/ui/separator-large.png
+styles/gaia/widgets/headers/images/ui/shadow.png
+styles/gaia/widgets/headers/images/ui/header.png
+styles/gaia/widgets/headers/images/ui/dark/header.png
+styles/gaia/widgets/headers/images/ui/dark/subheader.png
+styles/gaia/widgets/headers/images/ui/dark/separator.png
+styles/gaia/widgets/headers/images/ui/dark/negative.png
+styles/gaia/widgets/headers/images/ui/subheader.png
+styles/gaia/widgets/headers/images/ui/organic/header.png
+styles/gaia/widgets/headers/images/ui/organic/subheader.png
+styles/gaia/widgets/headers/images/ui/organic/separator.png
+styles/gaia/widgets/headers/images/ui/organic/pattern.png
+styles/gaia/widgets/headers/images/ui/organic/negative.png
+styles/gaia/widgets/headers/images/ui/separator.png
+styles/gaia/widgets/headers/images/ui/overlay/header.png
+styles/gaia/widgets/headers/images/ui/overlay/separator.png
+styles/gaia/widgets/headers/images/ui/negative.png
+styles/gaia/widgets/headers/images/icons/edit.png
+styles/gaia/widgets/headers/images/icons/close.png
+styles/gaia/widgets/headers/images/icons/add.png
+styles/gaia/widgets/headers/images/icons/user.png
+styles/gaia/widgets/headers/images/icons/menu.png
+styles/gaia/widgets/headers/images/icons/back.png
+styles/gaia/widgets/headers/images/icons/send.png
+styles/gaia/widgets/headers/images/icons/clear.png
+styles/gaia/widgets/toolbars/index.html
+styles/gaia/widgets/toolbars/images/icons/search.png
+styles/gaia/widgets/toolbars/images/icons/mark.png
+styles/gaia/widgets/toolbars/images/icons/delete.png
+styles/gaia/widgets/toolbars/images/icons/share.png
+styles/gaia/widgets/toolbars/images/icons/move.png
+styles/gaia/widgets/toolbars/images/icons/update.png
+styles/gaia/widgets/toolbars/images/icons/send.png
+styles/gaia/widgets/toolbars/images/dummy.png
+styles/gaia/widgets/lists/index.html
+styles/gaia/widgets/lists/style.css
+styles/gaia/widgets/lists/images/example-notifications.png
+styles/gaia/widgets/lists/images/icons/smsin-new.png
+styles/gaia/widgets/lists/images/icons/callin.png
+styles/gaia/widgets/lists/images/icons/smsin.png
+styles/gaia/widgets/lists/images/icons/callmiss-new.png
+styles/gaia/widgets/lists/images/icons/dot.png
+styles/gaia/widgets/lists/images/icons/arrowaction.png
+styles/gaia/widgets/lists/images/icons/callout.png
+styles/gaia/widgets/lists/images/icons/smsin-overlay.png
+styles/gaia/widgets/lists/images/dummy.jpg
+styles/gaia/widgets/headers.css
+styles/gaia/widgets/toolbars.css
+styles/gaia/widgets/buttons/index.html
+styles/gaia/widgets/buttons/images/ui/danger-press.png
+styles/gaia/widgets/buttons/images/ui/danger-disabled.png
+styles/gaia/widgets/buttons/images/ui/danger.png
+styles/gaia/widgets/buttons/images/ui/recommend.png
+styles/gaia/widgets/buttons/images/ui/default.png
+styles/gaia/widgets/buttons/images/ui/disabled.png
+styles/images/ui/pattern-mode.png
+styles/images/ui/shadow.png
+styles/images/ui/gradient.png
+styles/images/ui/danger-press.png
+styles/images/ui/danger-disabled.png
+styles/images/ui/danger.png
+styles/images/ui/recommend.png
+styles/images/ui/shadow-invert.png
+styles/images/ui/default.png
+styles/images/ui/disabled.png
+styles/images/ui/pattern.png
+styles/images/dummy.png
+styles/main.css
+styles/chrono.css
+
+# catch-all for anything else
+NETWORK:
+*
+http://*
+https://*

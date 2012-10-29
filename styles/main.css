@@ -1,0 +1,1040 @@
+@font-face {  
+  font-family: 'MozTTLight';  
+  src: url(gaia/fonts/MozTT%20Light.ttf) format("truetype");  
+}  
+section[role="region"] > header:first-child {
+  position: relative;
+  z-index: 10;
+  padding: 0;
+  height: 5rem;
+  color: #fff;
+  background: url(gaia/widgets/headers/images/ui/header.png) repeat-x 0 0;
+  background-size: auto 100%;
+  border: none;
+}
+section[role="region"] > header:first-child:after {
+  content: "";
+  display: block;
+  height: 0.3rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: url(gaia/widgets/headers/images/ui/shadow.png) repeat-x 0 0;
+  background-size: auto 100%;
+}
+section[role="region"] > header:first-child h1 {
+  font: 2.2rem/4.8rem "Open Sans", Sans-serif;
+  text-align: left;
+  color: #fff;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+  margin: 0 0 0 3rem;
+  height: 100%
+}
+section[role="region"] > header:first-child h1 em {
+  font: bold 1.5rem/1em "Open Sans", Sans-serif;
+}
+section[role="region"] > header:first-child form {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  padding: 1rem 1rem 0 0.5rem ;
+  margin-left: 2.5rem;
+}
+section[role="region"] > header:first-child input[type=text] {
+  width: 100%;
+  height: 3rem;
+  -moz-box-sizing: border-box;
+  padding: 0 0.8rem;
+  border: solid 0.1rem #9d4123;
+  border-top-color: #a6501e;
+  border-radius: 0.3rem;
+  background: #fff url(gaia/widgets/headers/images/ui/shadow.png) repeat-x left -0.1rem;
+  font: 1.35rem/3em "Open Sans", Sans-serif;
+  box-shadow: none;
+}
+section[role="region"] > header:first-child form button[type="reset"] {
+  font-size: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  bottom: 0;
+  width: 3rem;
+  height: auto;
+  margin: 0;
+  display: none;
+  border: none;
+  background: url(gaia/widgets/headers/images/icons/clear.png) no-repeat center center;
+}
+section[role="region"] > header:first-child input[type=text]:valid + button[type="reset"] {
+  display: block;
+}
+section[role="region"] > header:first-child menu[type="toolbar"] {
+  height: 100%;
+  float: right;
+}
+section[role="region"] > header:first-child menu[type="toolbar"] a,
+section[role="region"] > header:first-child menu[type="toolbar"] button {
+  height: 5rem;
+  min-width: 5rem;
+  width: auto;
+  margin-bottom: 0;
+  border-radius: 0;
+  line-height: 5rem;
+  float: left;
+  background: none;
+  padding: 0 1.75rem;
+  -moz-box-sizing: border-box;
+  text-align: center;
+  text-shadow: none;
+  position: relative;
+  z-index: 5;
+}
+section[role="region"] > header:first-child menu[type="toolbar"] a:last-child,
+section[role="region"] > header:first-child menu[type="toolbar"] button:last-child {
+  background: url(gaia/widgets/headers/images/ui/separator.png) no-repeat left center;
+  margin-left: -0.2rem;
+  z-index: 1;
+}
+section[role="region"] > header:first-child menu[type="toolbar"] {
+  padding: 0;
+  margin: 0;
+}
+section[role="region"] > header:first-child a,
+section[role="region"] > header:first-child button {
+  border: none;
+  background: none;
+  padding: 0;
+  overflow: hidden;
+  font: 600 1.4rem/1.1em "Open Sans", Sans-serif;
+  color: #fff;
+  border-radius: 0;
+}
+section[role="region"] > header:first-child a::-moz-focus-inner,
+section[role="region"] > header:first-child button::-moz-focus-inner,
+section[role="region"] > header:first-child a:active,
+section[role="region"] > header:first-child button:active,
+section[role="region"] > header:first-child a:focus,
+section[role="region"] > header:first-child button:focus {
+  outline: none !important;
+  border: none !important;
+}
+section[role="region"] > header:first-child a:not([aria-disabled="true"]):active .icon:after,
+section[role="region"] > header:first-child button:not(:disabled):active .icon:after,
+section[role="region"] > header:first-child menu[type="toolbar"] a:not([aria-disabled="true"]):active,
+section[role="region"] > header:first-child menu[type="toolbar"] button:not(:disabled):active  {
+  background: #008aaa !important;
+  transition: background 0.2s ease;
+  border-bottom: solid 0.1rem rgba(0, 0, 0, 0.2) !important;
+}
+section[role="region"] > header:first-child menu[type="toolbar"] a[aria-disabled="true"],
+section[role="region"] > header:first-child menu[type="toolbar"] button[disabled]  {
+  opacity: 0.5;
+}
+section[role="region"] > header:first-child a:first-letter,
+section[role="region"] > header:first-child button:first-letter {
+  text-transform: uppercase;
+}
+section[role="region"] > header:first-child .icon {
+  display: inline-block;
+  vertical-align: top;
+  float: none;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 -1rem;
+  background: transparent no-repeat center center;
+  font-size: 0;
+  overflow: hidden;
+  position: relative;
+  height: 4.9rem;
+}
+section[role="region"] > header:first-child .icon.icon-add {
+  background-image: url(gaia/widgets/headers/images/icons/add.png);
+}
+section[role="region"] > header:first-child .icon.icon-edit {
+  background-image: url(gaia/widgets/headers/images/icons/edit.png);
+}
+section[role="region"] > header:first-child .icon.icon-close {
+  background-image: url(gaia/widgets/headers/images/icons/close.png);
+}
+section[role="region"] > header:first-child .icon.icon-back {
+  background-image: url(gaia/widgets/headers/images/icons/back.png);
+}
+section[role="region"] > header:first-child .icon.icon-menu {
+  background-image: url(gaia/widgets/headers/images/icons/menu.png);
+}
+section[role="region"] > header:first-child .icon.icon-user {
+  background-image: url(gaia/widgets/headers/images/icons/user.png);
+}
+section[role="region"] > header:first-child > button,
+section[role="region"] > header:first-child > a {
+  position: absolute;
+  left: 0;
+  width: 4rem;
+  height: 5rem;
+  background: url(gaia/widgets/headers/images/ui/separator-large.png) no-repeat 2rem center;
+  overflow: hidden;
+  text-align: center;
+}
+section[role="region"] > header:first-child > button .icon,
+section[role="region"] > header:first-child > a .icon {
+  overflow: visible;
+  font-size: 0;
+  position: static;
+  margin-left: -3rem;
+  height: 4.9rem;
+}
+section[role="region"] > header:first-child > button .icon:after,
+section[role="region"] > header:first-child > a .icon:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 2rem;
+  height: 4.9rem;
+  background: #9d3d26 url(gaia/widgets/headers/images/ui/negative.png) repeat-x 0 0;
+}
+section[role="region"] > header > a .icon.icon-menu,
+section[role="region"] > header > button .icon.icon-menu {
+  background-position: -1rem center;
+}
+section[role="region"] > header {
+  background: url(gaia/widgets/headers/images/ui/subheader.png) repeat left bottom;
+  border-bottom: solid 0.1rem #e6e6e6;
+  z-index: 0;
+  padding: 0.4rem 0;
+  height: auto;
+  color: #424242;
+}
+section[role="region"] > header:after {
+  display: none;
+}
+section[role="region"] > header h2 {
+  font-family: "Open Sans", Sans-serif;
+  font-weight: 600;
+  margin: 0 3rem;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+section[role="region"].skin-dark > header:first-child,
+.skin-dark section[role="region"] > header:first-child {
+  background: url(gaia/widgets/headers/images/ui/dark/header.png) repeat-x 0 0;
+}
+section[role="region"].skin-dark > header:first-child > a .icon:after,
+.skin-dark section[role="region"] > header:first-child > a .icon:after,
+section[role="region"].skin-dark > header:first-child > button .icon:after,
+.skin-dark section[role="region"] > header:first-child > button .icon:after {
+  background: #26272c url(gaia/widgets/headers/images/ui/dark/negative.png) repeat-x 0 0;
+}
+section[role="region"].skin-dark > header:first-child menu[type="toolbar"] a:last-child,
+.skin-dark section[role="region"] > header:first-child menu[type="toolbar"] a:last-child,
+section[role="region"].skin-dark > header:first-child menu[type="toolbar"] button:last-child,
+.skin-dark section[role="region"] > header:first-child menu[type="toolbar"] button:last-child {
+  background-image: url(gaia/widgets/headers/images/ui/dark/separator.png);
+}
+section[role="region"].skin-dark > header,
+.skin-dark section[role="region"] > header {
+  background: #7f7f7f url(gaia/widgets/headers/images/ui/dark/subheader.png) repeat-x left bottom;
+  color: #c5c5c5;
+}
+section[role="region"].skin-organic > header:first-child,
+.skin-organic section[role="region"] > header:first-child {
+  background: url(gaia/widgets/headers/images/ui/organic/header.png) repeat-x 0 0,  url(gaia/widgets/headers/images/ui/organic/pattern.png) repeat 0 0;
+}
+section[role="region"].skin-organic > header:first-child:after,
+.skin-organic section[role="region"] > header:first-child:after {
+  margin-top: -0.1rem;
+}
+section[role="region"].skin-organic > header:first-child > a .icon:after,
+.skin-organic section[role="region"] > header:first-child > a .icon:after,
+section[role="region"].skin-organic > header:first-child > button .icon:after,
+.skin-organic section[role="region"] > header > button .icon:after {
+  background: url(gaia/widgets/headers/images/ui/organic/negative.png) repeat-x 0 0;
+}
+section[role="region"].skin-organic > header:first-child menu[type="toolbar"] a:last-child,
+.skin-organic section[role="region"] > header:first-child menu[type="toolbar"] a:last-child,
+section[role="region"].skin-organic > header:first-child menu[type="toolbar"] button:last-child,
+.skin-organic section[role="region"] > header:first-child menu[type="toolbar"] button:last-child {
+  background-image: url(gaia/widgets/headers/images/ui/organic/separator.png);
+}
+section[role="region"].skin-organic > header,
+.skin-organic section[role="region"] > header {
+  background: #7f7f7f url(gaia/widgets/headers/images/ui/organic/subheader.png) repeat-x left bottom;
+  color: #fff;
+}
+[role="toolbar"] {
+  height: 4rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(0,0,0, 0.85);
+}
+[role="toolbar"] ul {
+  float: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+[role="toolbar"] .end {
+  float: right;
+}
+[role="toolbar"] li {
+  float: left;
+}
+[role="toolbar"] button {
+  width: 5.5rem;
+  height: 4rem;
+  border: none;
+  font-size: 0;
+  background: transparent no-repeat 50% 50%;
+  padding: 0;
+  border-radius: 0;
+}
+[role="toolbar"] button:active {
+  background-color: #008aaa;
+}
+[role="toolbar"] .update {
+  background-image: url(gaia/widgets/toolbars/images/icons/update.png);
+}
+[role="toolbar"] .mark {
+  background-image: url(gaia/widgets/toolbars/images/icons/mark.png);
+}
+[role="toolbar"] .share {
+  background-image: url(gaia/widgets/toolbars/images/icons/share.png);
+}
+[role="toolbar"] .send {
+  background-image: url(gaia/widgets/toolbars/images/icons/send.png);
+}
+[role="toolbar"] .search {
+  background-image: url(gaia/widgets/toolbars/images/icons/search.png);
+}
+[role="toolbar"] .move {
+  background-image: url(gaia/widgets/toolbars/images/icons/move.png);
+}
+[role="toolbar"] .delete {
+  background-image: url(gaia/widgets/toolbars/images/icons/delete.png);
+}
+button::-moz-focus-inner {
+  border: none;
+  outline: none;
+}
+button,
+a[role="button"] {
+  width: 100%;
+  height: 3.8rem;
+  margin: 0 0 1rem;
+  padding: 0 1.5rem;
+  -moz-box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background: #fafafa url(gaia/widgets/buttons/images/ui/default.png) repeat-x left bottom;
+  border: 0.1rem solid #9f9f9f;
+  border-radius: 0.3rem;
+  font-size: 1.6rem;
+  font-family: 'Open Sans', Sans-serif;
+  font-weight: 600;
+  line-height: 3.8rem;
+  color: #333;
+  text-align: center;
+  text-shadow: 0.1rem 0.1rem 0 rgba(255,255,255,0.3);
+  text-decoration: none;
+  outline: none;
+}
+button:active,
+a[role="button"]:active,
+button.recommend:active,
+a.recommend[role="button"]:active  {
+  border-color: #008aaa;
+  background: #008aaa;
+  color: #333;
+}
+button.recommend,
+a[role="button"].recommend {
+  background-image: url(gaia/widgets/buttons/images/ui/recommend.png);
+  background-color: #00caf2;
+  border-color: #00acce;
+}
+button.danger,
+a.danger[role="button"] {
+  background-image: url(gaia/widgets/buttons/images/ui/danger.png);
+  background-color: #b70404;
+  color: #fff;
+  text-shadow: -0.1rem -0.1rem 0 #830b0b;
+  border: none;
+}
+button.danger:active,
+a[role="button"].danger:active {
+  background-image: url(gaia/widgets/buttons/images/ui/danger-press.png);
+  background-color: #890707;
+}
+button[disabled],
+a[role="button"][aria-disabled="true"],
+button[disabled].recommend,
+a[role="button"][aria-disabled="true"].recommend {
+  background-image: url(gaia/widgets/buttons/images/ui/disabled.png);
+  background-color: transparent;
+  border-color: #dadada;
+  color: #bcbcbc;
+  pointer-events: none;
+}
+button[disabled].danger,
+a[role="button"][aria-disabled="true"].danger {
+  background-image: url(gaia/widgets/buttons/images/ui/danger-disabled.png);
+  color: #fff;
+  text-shadow: none;
+  pointer-events: none;
+}
+body[role="application"] section[role="region"][data-state="drawer"] {
+  transform: translateX(80%);
+}
+body[role="application"] > nav { 
+  position: absolute;
+  width: 80%;
+  background: url(gaia/widgets/drawer/images/ui/pattern.png) repeat;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  font-family: 'Open Sans', Sans-serif;
+}
+body[role="application"] > nav > header {
+  position: relative;
+  z-index: 10;
+  height: 5rem;
+  color: #fff;
+  background: url(gaia/widgets/drawer/images/ui/header.png) repeat-x left top;
+}
+body[role="application"] > nav > header:after {
+  content: "";
+  height: 0.3rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: url(gaia/widgets/drawer/images/ui/shadow-header.png) repeat-x left top;
+  background-size: auto 100%;
+}
+body[role="application"] > nav > header h1 {
+  font: 2.2rem/4.8rem "Open Sans", Sans-serif;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+  margin: 0 0 0 3rem;
+  height: 100%
+}
+body[role="application"] > nav > header h1 em {
+  font: bold 1.5rem/1em "Open Sans", Sans-serif;
+}
+body[role="application"] > nav > header menu[type="toolbar"] {
+  height: 100%; float: right;
+}
+body[role="application"] > nav > header menu[type="toolbar"] a, 
+body[role="application"] > nav > header menu[type="toolbar"] button { 
+  height: 4.9rem; 
+  line-height: 4.9rem;
+  float: left; 
+  background: none; 
+  padding: 0 1.75rem; 
+  -moz-box-sizing: border-box;
+  min-width: 5rem;
+  text-align: center;
+}
+body[role="application"] > nav > header menu[type="toolbar"] a:last-child,
+body[role="application"] > nav > header menu[type="toolbar"] button:last-child {
+  background: url(gaia/widgets/drawer/images/ui/separator.png) no-repeat left center;
+}
+body[role="application"] > nav > header menu[type="toolbar"] {
+  padding: 0;
+  margin: 0;
+}
+body[role="application"] > nav > header a,
+body[role="application"] > nav > header button {
+  border: none;
+  background: none;
+  padding: 0;
+  overflow: hidden;
+  font: 600 1.4rem/1.1em "Open Sans", Sans-serif;
+  color: #fff;
+}
+body[role="application"] > nav > header a:first-letter,
+body[role="application"] > nav > header button:first-letter {
+  text-transform: uppercase;
+}
+body[role="application"] > nav > header .icon {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 -1rem;
+  background: transparent no-repeat center center;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  height: 4.9rem;
+}
+body[role="application"] > nav > header .icon.icon-add {
+  background-image: url(gaia/widgets/drawer/images/icons/add.png);
+}
+body[role="application"] > nav > header .icon.icon-edit {
+  background-image: url(gaia/widgets/drawer/images/icons/edit.png);
+}
+body[role="application"] > nav > header .icon.icon-close {
+  background-image: url(gaia/widgets/drawer/images/icons/close.png);
+}
+body[role="application"] > nav > header .icon.icon-menu {
+  background-image: url(gaia/widgets/drawer/images/icons/menu.png);
+}
+body[role="application"] > nav > header .icon.icon-user {
+  background-image: url(gaia/widgets/drawer/images/icons/user.png);
+}
+body[role="application"] > nav:after { 
+  content: '';
+  width: 1rem;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: url(gaia/widgets/drawer/images/ui/shadow.png) right top repeat-y;
+}
+body[role="application"] > nav > .inner {
+  overflow-y: auto;
+  max-height: -moz-calc(100% - 9rem);
+}
+body[role="application"] > nav .inner > h2 {
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 3.3rem;
+  text-indent: 3rem;
+  color: #fff;
+  background: url(gaia/widgets/drawer/images/ui/pattern-subheader.png) repeat left top;
+  border-bottom: 0.1rem solid #596068; 
+  margin: 0;
+  padding-right: 0.8rem;
+}
+body[role="application"] > nav [role="toolbar"] {
+  position: absolute;
+}
+body[role="application"] > nav .inner > ul { 
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body[role="application"] > nav .inner > ul > li { 
+  color: #fff;
+  list-style: none;
+  transition: background 0.2s ease;
+}
+body[role="application"] > nav .inner > ul > li:active {
+  background: #00ABCC;  
+}
+body[role="application"] > nav .inner > ul > li > a { 
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 4.35rem;
+  border-bottom: 0.1rem solid #596068; 
+  text-indent: 3rem;
+  padding-right: 0.8rem;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+body[role="application"] > section[role="region"] {
+  width: -moz-calc(100%);
+  transition: all 0.25s ease;
+  position: relative;
+  left: 0;
+  z-index: 100;
+  padding-left: 0;
+}
+body[role="application"] section[role="region"][data-state="drawer"] > header {
+  transition: all 0.25s linear;
+  margin-left: 0;
+}
+body[role="application"] section[role="region"] > header {
+  margin-left: -1.6rem;
+}
+body[role="application"] section[role="region"] > header > button,
+body[role="application"] section[role="region"] > header > a {
+  width: 6rem;
+}
+body[role="application"] section[role="region"] > header > a .icon.icon-menu,
+body[role="application"] section[role="region"] > header > button .icon.icon-menu {
+  background-position: center center;
+}
+body[role="application"] section[role="region"] > header > button .icon:after,
+body[role="application"] section[role="region"] > header > a .icon:after {
+  width: 4rem;
+}
+body[role="application"] section[role="region"] > header > button,
+body[role="application"] section[role="region"] > header > a {
+  background-position: 4rem center;
+}
+body[role="application"] section[role="region"] > header h1 {
+  margin-left: 5rem;
+}
+body[role="application"] ul, body[role="application"] ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Open Sans", Sans-serif;
+}
+body[role="application"] li {
+  display: inline-block;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  transition: transform 0.3s ease;
+  border: solid 1px #dbd9d9;
+  border-right: none;
+  border-left: none;
+  margin: -1px 0 0;
+  position: relative;
+}
+body[role="application"] li > a:first-of-type,
+body[role="application"] li > a:first-of-type  {
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+body[role="application"] li > a:first-of-type:after {
+  content: "";
+  transition: opacity 0.2s ease;
+  background-color: #b1f1ff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0;
+}
+body[role="application"] li > a:first-of-type:active:after {
+  opacity: 0.6;
+}
+body[role="application"] li .aside {
+  float: left;
+  display: inline;
+  position: relative;
+  width: 5.5rem;
+  height: 6rem;
+  text-align: center;
+}
+body[role="application"] li .aside.end {
+  float: right;
+}
+body[role="application"] li .aside:before {
+  content: "";
+  height: 100%;
+  width: 1px;
+  margin-left: -1px;
+  display: inline-block;
+  vertical-align: middle;
+}
+body[role="application"] li .aside time {
+  display: inline-block;
+  vertical-align: super;
+  width: 4rem;
+  padding-right: 1rem;
+  font: 1.1rem/1em "Open Sans", Sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+}
+body[role="application"] li img {
+  float: right;
+  display: inline;
+  width: 6rem;
+  height: 6rem;
+  background: transparent center center;
+  background-size: 100% auto;
+}
+body[role="application"] li dl {
+  display: block;
+  overflow: hidden;
+  padding: 1rem 0.5rem 0 2rem;
+}
+body[role="application"] li .aside ~ dl {
+  padding-left: 0.5rem;
+}
+body[role="application"] li dl dt {
+  font: 1.8rem/1.2em "Open Sans", Sans-serif;
+  white-space: nowrap;
+  height: 2.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body[role="application"] li dl dt strong {
+  font-weight: 600;
+  font-family: "Open Sans", Sans-serif;
+}
+body[role="application"] li dl dt em {
+  font-size: 1.3rem;
+  font-style: normal;
+}
+body[role="application"] li dl mark {
+  background-color: #cfd3d7;
+}
+body[role="application"] li dl dd {
+  font-size: 1.4rem;
+  color: #5b5b5b;
+  white-space: nowrap;
+  height: 1.8rem;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body[role="application"] li dl dd strong {
+  font-weight: 600;
+  font-family: "Open Sans", Sans-serif;
+  color: #000;
+}
+body[role="application"] li dl dd time {
+  font-size: 1.4rem;
+  color: #5b5b5b;
+  margin-right: 0.3rem;
+}
+body[role="application"] li dl dd span {
+  margin-right: 0.3rem;
+}
+body[role="application"] li dl dd span:last-child {
+  margin: 0;
+}
+body[role="application"] li .icon  {
+  display: inline-block;
+  vertical-align: middle;
+  width: 3rem;
+  height: 3rem;
+  background: transparent no-repeat center center;
+  background-size: 100% auto;
+  font: 0/0 a;
+  overflow: hidden;
+  position: relative;
+}
+body[role="application"] li .icon.icon-arrowaction {
+  background-image: url(gaia/widgets/lists/images/icons/arrowaction.png);
+  width:1rem;
+  height: 1rem;
+  vertical-align: bottom;
+  margin: 0 -3rem 0.5rem 0;
+}
+body[role="application"] li .icon.icon-callout {
+  background-image: url(gaia/widgets/lists/images/icons/callout.png);
+  width: 2.4rem;
+  height: 2rem;
+}
+body[role="application"] li .icon.icon-smsin {
+  background-image: url(gaia/widgets/lists/images/icons/smsin.png);
+  width: 2.5rem;
+  height: 2.2rem;
+}
+body[role="application"] li[data-state="new"] .icon.icon-smsin {
+  background-image: url(gaia/widgets/lists/images/icons/smsin-new.png);
+  width: 2.5rem;
+  height: 2.2rem;
+}
+body[role="application"] ul[data-state="edit"] li,
+body[role="application"] ol[data-state="edit"] li {
+  transform: translateX(5rem);
+}
+body[role="application"] ul[data-state="edit"] li > label.check,
+body[role="application"] ol[data-state="edit"] li > label.check {
+   opacity: 1;
+}
+body[role="application"] li > label.check {
+  transition: opacity 0.6s ease;
+  width: 5rem;
+  height: 6rem;
+  right: 100%;
+  position: absolute;
+  top: -1px;
+  z-index: 100;
+  opacity: 0;
+  border: solid 1px #DBD9D9;
+  border-left: none;
+  border-right: none;
+}
+body[role="application"] li[aria-disabled="true"]:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e6e6e6;
+  opacity: 0.7;
+}
+body[role="application"]  li[aria-disabled="true"] {
+  pointer-events:none;
+}
+body[role="application"] li[data-state="marked"]:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.6rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  margin-left: 0.5rem;
+  background: url(gaia/widgets/lists/images/icons/dot.png) no-repeat center;
+  background-size: 100% auto;
+}
+body[role="application"] li[data-state="new"] time {
+  color: #52b6cc !important;
+}
+body[role="application"] li[data-state="tagged"]:after  {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  bottom: 0;
+  width: 0.4rem;
+}
+body[role="application"] li[data-tag="A"]:after { background-color: #e7a300; }
+body[role="application"] li[data-tag="B"]:after { background-color: #954fa7; }
+body[role="application"] ul.overlay li,
+body[role="application"] ol.overlay li {
+  border-top-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(0, 0, 0, 0.6);
+}
+body[role="application"] ul.overlay  li dl dt,
+body[role="application"] ol.overlay  li dl dt {
+  color: #fff;
+}
+body[role="application"] ul.overlay li dl dd,
+body[role="application"] ol.overlay li dl dd {
+  color: #ccc;
+}
+body[role="application"] ul.overlay .icon.icon-smsin,
+body[role="application"] ol.overlay .icon.icon-smsin {
+  background-image: url(gaia/widgets/lists/images/icons/smsin-overlay.png);
+  width: 3.1rem;
+  height: 3.1rem;
+}
+[role="chrono"] {
+  text-align: center;
+  white-space: nowrap;
+  word-spacing: -99rem;
+  height: 6.6rem; 
+  position: relative;
+  border: solid 1px rgba(0, 0, 0, 0.25);
+  background: white;
+}
+[role="chrono"] > p {
+  background: #00A5C5 no-repeat center center;
+  height: 4.6rem;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 50%;
+  right: 0;
+  z-index: 5;
+  margin: -2.3rem 0 0;
+  pointer-events: none;
+}
+[role="chrono"] > p span {
+  width: -moz-calc(100% / 3);
+  background: transparent no-repeat 55% 47%;
+  background-size: 160% auto;
+  margin: -9rem 0;
+  padding: 9rem 0;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  overflow: hidden;
+  height: 100%;
+}
+[role="chrono"] > div {
+  position: absolute;
+  left: -moz-calc((100%) + 10px);
+  width: -moz-calc((100% / 3) - 1px);
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  overflow: hidden;
+  height: 22.6rem; 
+  border-right: solid 1px #666;
+  border-left: solid 1px #000;
+}
+[role="chrono"] [role="listbox"] {
+  position: relative;
+  overflow: auto;
+  margin: 0 -0.8rem 0 -1rem;
+  padding: 0;
+  max-height: 100%;
+}
+[role="chrono"] [role="listbox"] li {
+  margin: 0;
+  padding-bottom: 1px;
+  list-style: none;
+  position: relative;
+  color: #fff;
+  font-family: 'Open Sans', Sans-serif;
+  font-weight: lighter;
+  font-size: 2.2rem;
+  color: #fff;
+  transition: background 0.2s ease;
+  height: 4.6rem;
+  line-height: 4.6rem;
+  border: 0;
+}
+[role="chrono"] [role="listbox"] li:active {
+  background: #00ABCC;
+  color: #fff!important;
+}
+[role="chrono"] [role="listbox"] li a {
+  text-indent: 0.5rem;
+  outline: none;
+  text-decoration: none;
+  display: block;
+  color: #fff;
+}
+[role="chrono"] li:first-child {
+  margin-top: 9rem;
+}
+[role="chrono"] li:last-child {
+  margin-bottom: 9rem;
+}
+[role="chrono"] div:first-of-type {
+  border-left: none;
+}
+[role="chrono"] .mode {
+  border-right: none;
+  background: url(images/ui/pattern.png) repeat left top;
+}
+body {
+    font-family: 'MozTTLight', Verdana, sans-serif;
+}
+a {
+    color: #ff4e00;
+    font-weight: bold;
+}
+p {
+    padding: 1em;
+    font-size: 1.5em;
+}
+.list-item-large {
+    font-size: 1.5em;
+    padding: 1em;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    background-color: #fff;
+    height: 100%;
+    overflow-x: hidden;
+}
+section[role="region"] {
+    height: 100%; 
+    font: 2.2rem/1em;
+    overflow: hidden;
+}
+div[role="main"] {
+    background: white no-repeat left top;
+    height: -moz-calc(100% - 5rem); 
+}
+div[role="main"] > p {
+    margin: 2rem 2.5rem; 
+}
+[role="toolbar"] button:active {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+#laps {
+  position: absolute;
+  background: white;
+  top: 5rem;
+  left: 0;
+  border: 0;
+  width: -moz-calc(100% + 13px); 
+  height: -moz-calc(100% - 5rem); 
+  overflow-y: scroll;
+  z-index: 60;
+  -moz-transition: -moz-transform 1s;
+  -moz-transform: translateX(0) translateY(90%);
+}
+#laps h2, .list-header {
+    font-size: 1.8rem;
+    font-weight: lighter;
+    color: #666;
+    margin: -1px 0 0;
+    background-color: #f5f5f5;
+    padding: 0.4rem 0.4rem 0.4rem 3rem;
+    border: solid 1px #e8e8e8;
+}
+#laps:target {
+  -moz-transition: -moz-transform 1s;
+  -moz-transform: translateX(0) translateY(0%);
+}
+#about {
+  position: fixed;
+  background: white;
+  top: 5rem;
+  left: 0;
+  border: 0;
+  width: -moz-calc(100% + 13px); 
+  height: -moz-calc(100% - 5rem); 
+  overflow-y: scroll;
+  z-index: 60;
+  -moz-transition: -moz-transform 1s;
+  -moz-transform: translateX(100%) translateY(0%);
+}
+#about h2 {
+    font-size: 1.8rem;
+    font-weight: lighter;
+    color: #666;
+    margin: -1px 0 0;
+    background-color: #f5f5f5;
+    padding: 0.4rem 0.4rem 0.4rem 3rem;
+    border: solid 1px #e8e8e8;
+}
+#about:target {
+  -moz-transition: -moz-transform 1s;
+  -moz-transform: translateX(0) translateY(0%);
+}
+#install {
+  position: fixed;
+  background: white;
+  top: 5rem;
+  left: 0;
+  border: 0;
+  width: -moz-calc(100% + 13px); 
+  height: -moz-calc(100% - 5rem); 
+  overflow-y: scroll;
+  z-index: 60;
+  -moz-transition: -moz-transform 1s;
+  -moz-transform: translateX(100%) translateY(0%);
+}
+#install h2 {
+    font-size: 1.8rem;
+    font-weight: lighter;
+    color: #666;
+    margin: -1px 0 0;
+    background-color: #f5f5f5;
+    padding: 0.4rem 0.4rem 0.4rem 3rem;
+    border: solid 1px #e8e8e8;
+}
+#install:target {
+  -moz-transition: -moz-transform 1s;
+  -moz-transform: translateX(0) translateY(0%);
+}
+[role="application"] nav .inner ul li {
+    border: 0;
+}
