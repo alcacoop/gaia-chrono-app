@@ -1,1 +1,1 @@
-define(["require"],function(e){return{app_version:"0.1.1-build4"}})
+define(["require"],function(e){return{app_version:"0.1.1-build5"}})
