@@ -4,6 +4,7 @@ define(function (require) {
   // like:
   // var util = require('./util');
 
+  require('app/appcache_updates');
   var drawer = require('app/drawer');
   require('app/about');
   require('app/install');
