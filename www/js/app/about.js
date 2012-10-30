@@ -12,4 +12,5 @@ define(function (require) {
     } 
   });
 
+  $("#app_version").html(require("app/version").app_version);
 });

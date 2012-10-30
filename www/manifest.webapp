@@ -2,6 +2,7 @@
   "name": "Chrono",
   "description": "Gaia Chronometer Example App",
   "launch_path": "/gaia-chrono-app/index.html",
+  "appcache_path": "/gaia-chrono-app/manifest.appcache",
   "developer": {
     "name": "Luca Greco <luca.greco@alcacoop.it>",
     "url": "https://github.com/rpl/gaia-chrono"
