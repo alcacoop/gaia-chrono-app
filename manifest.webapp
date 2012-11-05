@@ -32,6 +32,8 @@
   },
   "default_locale": "en-US",
   "icons": {
+    "128": "/gaia-chrono-app/icons/chrono-128.png",
+    "64": "/gaia-chrono-app/icons/chrono-64.png",
     "120": "/gaia-chrono-app/icons/chrono-120.png",
     "60": "/gaia-chrono-app/icons/chrono-60.png"
   },

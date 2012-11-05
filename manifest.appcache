@@ -1,11 +1,13 @@
 CACHE MANIFEST
-# 3YQS5mIer885Vuc0mDA4Easw9hg=
+# qNBJKBnEzn4Lwu9LjnIgUxa/N3E=
 
 CACHE:
 index.html
 build.txt
 icons/chrono-60.png
 icons/chrono-120.png
+icons/chrono-64.png
+icons/chrono-128.png
 manifest.webapp
 js/lib/require.js
 js/lib/jquery.js
