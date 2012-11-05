@@ -3,7 +3,12 @@
   <head>
     <meta charset="utf-8"> 
     <link rel="stylesheet" href="styles/main.css">
-    
+    <script>
+// WORKAROUND BUG: https://bugzilla.mozilla.org/show_bug.cgi?id=683794
+window.applicationCache.addEventListener('updateready', function () {
+ // dummy, fired
+}, false);
+    </script>
     <script data-main="js/app" src="js/lib/require.js"></script>
   </head>
   <body role="application">
@@ -85,7 +90,19 @@
       </div>
 
       <div id="about" role="page3" class="view">
-        <h2 id="about-header" class="list-header">About</h2>
+        <h2 id="about-header" class="list-header">
+          About
+          (version: <b id="app_version">X.Y.Z</b>)
+        </h2>
+        <ul>
+          <li>
+            <button class="install-btn">Install</button>
+            <button class="upgrade-btn">Upgrade</button>
+            <button class="reload-btn">Reload</button>
+            <pre class="install-error">
+            </pre>
+          </li>
+        </ul>
         <p><b>Chrono</b> is a simple Gaia OpenWebApp coded as example in
           <b>"Hack On FirefoxOS"</b> talk during local <i>LinuxDay2012</i> event.
         </p>
@@ -112,19 +129,17 @@
               App Sourcecode Repo: "github.com/alcacoop/gaia-chrono-app"
             </a>
           </li>
-          <li>
-            <button class="install-btn">Install</button>
-            <button class="upgrade-btn">Upgrade</button>
-            <pre class="install-error">
-            </pre>
-          </li>
-          <li>
-            <p>Current Version: <b id="app_version">X.Y.Z</b></p>
-          </li>
         </ul>
       </div>
     </section>
     <!-- END content -->
 
+    <!-- Google Analytics -->
+    <script>
+      var _gaq=[['_setAccount','UA-3890753-9'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
   </body>
 </html>

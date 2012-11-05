@@ -5,7 +5,7 @@
   "appcache_path": "/gaia-chrono-app/manifest.appcache",
   "developer": {
     "name": "Luca Greco <luca.greco@alcacoop.it>",
-    "url": "https://github.com/rpl/gaia-chrono"
+    "url": "http://alcacoop.github.com/gaia-chrono-app"
   },
   "installs_allowed_from": ["*"],
   "locales": {
@@ -35,5 +35,5 @@
     "120": "/gaia-chrono-app/icons/chrono-120.png",
     "60": "/gaia-chrono-app/icons/chrono-60.png"
   },
-  "orientation": "portrait-primary"
+  "orientation": "portrait"
 }

@@ -1,6 +1,6 @@
 @font-face {  
   font-family: 'MozTTLight';  
-  src: url(gaia/fonts/MozTT%20Light.ttf) format("truetype");  
+  src: url(gaia/fonts/MozTT_Light.ttf) format("truetype");  
 }  
 section[role="region"] > header:first-child {
   position: relative;
