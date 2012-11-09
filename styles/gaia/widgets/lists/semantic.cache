@@ -1,0 +1,25 @@
+;; Object lists/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "lists/"
+  :tables (list 
+   (semanticdb-table "index.html"
+    :major-mode 'html-mode
+    :tags '(("document.addEventListener(\"DOMContentLoaded\", function(){
+      document.getElementById(\"bb-docs-toggle\").addEventListener(\"click\", function(){
+        var target = document.querySelector(\"ul[data-state]\");
+        if ( target.getAttribute(\"data-state\") == \"edit\" ) {
+            target.setAttribute(\"data-state\", \"\");
+        } else {
+            target.setAttribute(\"data-state\", \"edit\");
+        }
+      })
+    });" section nil nil [820 1289]) ("Lists" section nil nil [1289 1524]) ("Calendar" section (:members (("Calendar" section (:members (("9AM" section nil nil [1689 2206]))) nil [1584 2206]) ("Call log" section nil nil [2206 3072]) ("Press state ( click on the item! )" section (:members (("Missed call" section nil nil [3187 3712]))) nil [3072 3712]) ("Contacts" section nil nil [3712 4281]) ("Edit mode <button id=\"bb-docs-toggle\">toggle" section (:members (("Missed call" section nil nil [5312 5842]))) nil [4281 5842]) ("Search results" section (:members (("Missed call" section nil nil [5924 7054]))) nil [5842 7054]) ("Overlay theme" section (:members (("Missed call" section nil nil [7496 8004]) ("Missed call" section nil nil [8004 8007]))) nil [7054 7058]))) nil [1524 1530]))
+    :file "index.html"
+    :pointmax 8526
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0beta3"
+  :semanticdb-version "2.0beta3"
+  )

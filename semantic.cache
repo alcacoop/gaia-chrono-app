@@ -1,0 +1,23 @@
+;; Object www/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "www/"
+  :tables (list 
+   (semanticdb-table "index.html"
+    :major-mode 'html-mode
+    :tags '(("// WORKAROUND BUG: https://bugzilla.mozilla.org/show_bug.cgi?id=683794
+window.applicationCache.addEventListener('updateready', function () {
+ // dummy, fired
+}, false);" section nil nil [116 312]) ("add" section nil nil [312 385]) ("add" section (:members (("add" section nil nil [505 586]) ("Menu" section (:members (("Chrono" section nil nil [669 731]) ("About/Install" section nil nil [731 1203]) ("menu" section nil nil [1203 1285]))) nil [586 1285]) ("Chrono" section (:members (("PM" section nil nil [1943 2207]) ("Laps History <em>" section (:members (("1" section nil nil [2355 2678]))) nil [2207 2678]) ("About
+          (version: <b id=\"app_version\">X.Y.Z" section (:members (("volo" section nil nil [3659 3776]) ("Gaia UI Building Blocks" section nil nil [3776 3923]) ("RequireJS" section nil nil [3923 4063]))) nil [2678 4063]) ("Resources" section (:members (("Slides: \"Hack on FirefoxOS: mobile, web-based and really open\"" section nil nil [4146 4384]) ("App Sourcecode Repo: \"github.com/alcacoop/gaia-chrono-app\"" section nil nil [4384 4657]))) nil [4063 4657]))) nil [1285 4657]))) nil [385 4657]) ("var _gaq=[['_setAccount','UA-3890753-9'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));" section nil nil [4657 4664]))
+    :file "index.html"
+    :pointmax 4992
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0beta3"
+  :semanticdb-version "2.0beta3"
+  )

@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# qNBJKBnEzn4Lwu9LjnIgUxa/N3E=
+# hJtMmhJjqZen4qy/Mm+ZV5TWhPY=
 
 CACHE:
 index.html
@@ -8,6 +8,7 @@ icons/chrono-60.png
 icons/chrono-120.png
 icons/chrono-64.png
 icons/chrono-128.png
+semantic.cache
 manifest.webapp
 js/lib/require.js
 js/lib/jquery.js
@@ -75,6 +76,7 @@ styles/gaia/widgets/toolbars/images/icons/move.png
 styles/gaia/widgets/toolbars/images/icons/update.png
 styles/gaia/widgets/toolbars/images/icons/send.png
 styles/gaia/widgets/lists/style.css
+styles/gaia/widgets/lists/semantic.cache
 styles/gaia/widgets/lists/images/icons/smsin-new.png
 styles/gaia/widgets/lists/images/icons/callin.png
 styles/gaia/widgets/lists/images/icons/smsin.png

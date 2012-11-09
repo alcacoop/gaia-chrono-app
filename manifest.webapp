@@ -9,19 +9,7 @@
   },
   "installs_allowed_from": ["*"],
   "locales": {
-    "ar": {
-      "name": "Chrono",
-      "description": "Gaia Chronometer Example App"
-    },
     "en-US": {
-      "name": "Chrono",
-      "description": "Gaia Chronometer Example App"
-    },
-    "fr": {
-      "name": "Chrono",
-      "description": "Gaia Chronometer Example App"
-    },
-    "zh-TW": {
       "name": "Chrono",
       "description": "Gaia Chronometer Example App"
     },
