@@ -13,11 +13,11 @@
     "url": "git://github.com/alcacoop/gaia-chrono-app.git"
   },
   "devDependencies": {
-    "volo",
-    "volo-appcache",
-    "volo-ghdeploy",
-    "connect",
-    "less-middleware"
+    "volo": "*",
+    "volo-appcache": "*",
+    "volo-ghdeploy": "*",
+    "connect": "*",
+    "less-middleware": "*"
   },
   "homepage": "http://guthub.com/alcacoop/gaia-chrono-app",
   "amd": {},
