@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git://github.com/alcacoop/gaia-chrono-app.git"
   },
-  "devDependencies: {
+  "devDependencies": {
     "volo",
     "volo-appcache",
     "volo-ghdeploy",
