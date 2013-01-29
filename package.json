@@ -1,24 +1,24 @@
 {
-  "name": "gaia-chrono-app"  
+  "name": "gaia-chrono-app",  
   "version": "0.1.1",
   "keywords": [
     "Gaia",
     "FirefoxOS",
     "OpenWebApp"
   ],
-  "author": "Luca Greco <luca.greco@alcacoop.it>"
+  "author": "Luca Greco <luca.greco@alcacoop.it>",
   "description": "Simple Gaia Example App coded for the 'Hack On FirefoxOS' talk  (http://learn.alcacoop.it/2012/LinuxDay/HackOnFirefoxOS)",
   "repository": {
     "type": "git",
     "url": "git://github.com/alcacoop/gaia-chrono-app.git"
   },
-  "devDependencies": {
-    "volo": "*",
-    "volo-appcache": "*",
-    "volo-ghdeploy": "*",
-    "connect": "*",
-    "less-middleware": "*"
-  },
+  "devDependencies": [
+    "volo",
+    "volo-appcache",
+    "volo-ghdeploy",
+    "connect",
+    "less-middleware"
+  ],
   "homepage": "http://guthub.com/alcacoop/gaia-chrono-app",
   "amd": {},
   "volo": {
